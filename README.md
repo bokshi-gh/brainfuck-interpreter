@@ -1,6 +1,6 @@
 # Brainfuck Interpreter
 
-A simple **Brainfuck interpreter** written in Python, supporting loops, nested loops, input, and output. This project allows you to run Brainfuck programs directly from the command line.
+A simple **Brainfuck interpreter** written in Python. This project allows you to run Brainfuck programs directly from the command line.
 
 ## Installation and Usage
 
