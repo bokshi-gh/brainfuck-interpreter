@@ -11,7 +11,7 @@ git clone https://github.com/bokshi-gh/Brainfuck-interpreter.git
 cd brainfuck-interpreter
 ```
 
-2. Run the interpreter with a Branfuck file:
+2. Run the interpreter with a Brainfuck file:
 
 ```bash
 python interpreter.py test.bf
