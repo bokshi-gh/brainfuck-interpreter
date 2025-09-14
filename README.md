@@ -7,7 +7,7 @@ A simple **Brainfuck interpreter** written in Python. This project allows you to
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/bokshi-gh/Brainfuck-interpreter.git
+git clone https://github.com/bokshi-gh/brainfuck-interpreter.git
 cd brainfuck-interpreter
 ```
 
