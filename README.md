@@ -6,13 +6,13 @@ A simple **Brainfuck interpreter** written in Python, supporting loops, nested l
 
 1. Clone the repository:
 
-```
+```bash
 git clone https://github.com/bokshi-gh/Brainfuck-interpreter.git
 cd brainfuck-interpreter
 ```
 
 2. Run the interpreter with a Branfuck file:
 
-```
+```bash
 python interpreter.py test.bf
 ```
