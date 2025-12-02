@@ -1,6 +1,6 @@
 # Brainfuck Interpreter
 
-A simple [**Brainfuck**](https://en.wikipedia.org/wiki/Brainfuck) interpreter written in Python. This project allows you to run Brainfuck programs directly from the command line.
+A simple [**Brainfuck**](https://en.wikipedia.org/wiki/Brainfuck) interpreter written in Python.
 
 ## Installation and Usage
 
