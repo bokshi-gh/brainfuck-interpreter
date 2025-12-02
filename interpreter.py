@@ -13,48 +13,60 @@ with open(filepath, "r") as f:
 
 tape_size = 300000
 tape = array.array('B', [0] * tape_size)
-cell_pointer = 0
-
-user_input = []
+cell_pointer = 0 # also referred as data pointer
 
 instruction_pointer = 0
+user_input = []
+
 while instruction_pointer < file_content_length:
     instruction = file_content[instruction_pointer]
 
     if instruction == '+':
         tape[cell_pointer] = (tape[cell_pointer] + 1) % 256
+        
     elif instruction == '-':
         tape[cell_pointer] = (tape[cell_pointer] - 1) % 256
+        
     elif instruction == '>':
         if cell_pointer < tape_size - 1:
-            cell_pointer +=1
+            cell_pointer += 1
+            
     elif instruction == '<':
         if cell_pointer >= 0:
-            cell_pointer -=1
+            cell_pointer -= 1
+            
     elif instruction == '.':
         ascii_character = chr(tape[cell_pointer])
         print(ascii_character, end='')
+        
     elif instruction == ',':
         if user_input == []:
             user_input = list(input() + '\n')
+            
         tape[cell_pointer] = ord(user_input.pop(0))
+        
     elif instruction == '[':
         if tape[cell_pointer] == 0:
             open_bracket_count = 1
+            
             while open_bracket_count != 0:
-                instruction_pointer +=1
+                instruction_pointer += 1
+                
                 if file_content[instruction_pointer] == '[':
-                    open_bracket_count +=1
+                    open_bracket_count += 1
                 elif file_content[instruction_pointer] == ']':
-                    open_bracket_count -=1
+                    open_bracket_count -= 1
+                    
     elif instruction == ']':
         if tape[cell_pointer] != 0:
             close_bracket_count = 1
+            
             while close_bracket_count != 0:
-                instruction_pointer -=1
+                instruction_pointer -= 1
+                
                 if file_content[instruction_pointer] == ']':
-                    close_bracket_count +=1
+                    close_bracket_count += 1
                 elif file_content[instruction_pointer] == '[':
-                    close_bracket_count -=1
+                    close_bracket_count -= 1
 
-    instruction_pointer +=1
+    instruction_pointer += 1
